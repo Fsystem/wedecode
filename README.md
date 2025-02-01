@@ -82,6 +82,14 @@ TODO
   git clone https://github.com/biggerstar/wedecode
   npm install  # 如果 npm 安装很慢， 可以使用右侧命令换国内的淘宝源  npm config set registry https://registry.npmmirror.com
   npm run start
+
+  单包模式
+  直接指定包路径( 非扫描 ) D:\project\tool\wedecode\decryption-tool\wxpack\_APP_.wxapkg
+
+  分包模式
+  直接指定包路径( 非扫描 ) D:\project\tool\wedecode\decryption-tool\wxpack\
+
+  输出目录, 默认为当前所在目录的( OUTPUT ):  D:\project\tool\微信小程序反编译工程\xxx\
 ```
 
 ### 命令参数
@@ -128,6 +136,8 @@ TODO
 1. Q: 为何编译出来好多文件只有默认模板?  
    A: 这可能是缺失分包，你需要把分包放在一起编译， 你可以在 app.config.json 或者 app.json 文件中查看你依赖的分包信息,    
    在编译产物中出现默认模板是因为小程序会检查依赖，为了保证在缺失某些分包的情况下正常运行而生成的默认模板
+2. Q: 编译报错
+   A：根据提示删除部分不需要的分包
 
 ### 免责声明
 
